@@ -1,13 +1,10 @@
 import os
 import openai
 import json
-import pandas as pd
 
-# export api key under: OPENAI_API_KEY
-# or alternatively use openai.api_key = ""
-
-# list models
-# models = openai.Model.list()
+# 1. export api key in env as: OPENAI_API_KEY
+# 2. Adjust prompt as needed (for your desired language)
+# 3. Configure the variables below
 
 jsonKey = 'home'
 fileKey = 'wallet-home'
@@ -15,7 +12,6 @@ workingDir = './Openlogin-locale/'
 fileToTranslate = f'locales-{fileKey}.json'
 outputFile = f'locales-{fileKey}.new.json'
 max_tokens_per_minute = 90000
-
 
 preprompt = """
 I am going to provide you with json snippets to which I want you to add dutch translations for me. 
